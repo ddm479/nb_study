@@ -1,0 +1,77 @@
+@font-face {
+    font-family: 'GmarketSansMedium';
+    src: url('https://fastly.jsdelivr.net/gh/projectnoonnu/noonfonts_2001@1.1/GmarketSansMedium.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+html > body {
+    font-family: 'GmarketSansMedium';
+}
+
+// 라이브러리
+.con {
+    max-width: 1200px;
+    padding: 0 15px;
+}
+
+// 커스텀
+$top-bar-height: 80px; // 변수
+$common-bg-color: #fff; 
+$hover-color: #afafaf;
+
+.top-bar {
+    height: $top-bar-height;
+    border-bottom: 1px solid rgba(0, 0, 0, .5);
+    background-color: $common-bg-color;
+
+    .con {
+        height: 100%; // 부모의 높이를 그대로 받아온다.
+        display: flex;
+    }
+
+    // .top-bar__logo
+    &__logo {
+        font-size: 1.25rem;
+        font-weight: bold;
+        letter-spacing: -0.03rem;
+        height: 100%;
+        display: flex;
+        align-items: center;
+        padding: 0 10px;
+        transition: color .3s;
+
+        // .top-bar__logo에 마우스를 올렸을 때 적용
+        &:hover {
+            color: #afafaf;
+        }
+    }
+
+    // .top-bar__menu-1
+    &__menu-1 {
+        margin-left: auto;
+
+        > ul {
+            display: flex;
+            height: 100%;
+
+            > li {
+                > a {
+                    display: flex;
+                    height: 100%;
+                    align-items: center;
+                    padding: 0 20px;
+                    transition: all .3s; // 모든 속성 0.3초만에
+                }
+
+                // li에 마우스 올릴때 a태그에 적용
+                &:hover > a {
+                    color: $hover-color;
+                    text-decoration: underline;
+                }
+            }
+        }
+    }
+}
+
+// 하다가 10분쯤?인가부터 중단 너무 클론코딩이여서

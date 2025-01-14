@@ -1,0 +1,20 @@
+SASS -> CSS전처리기
+SCSS -> SASS로부터 파생된 CSS전처리기(SASS + CSS문법)
+
+codepen에서 실행가능
+
+
+<div></div>
+
+$bg-color: red; // 변수, 모든 태그에 적용가능
+$bg-hover-color: blue;
+
+div {
+    width: 200px;
+    height: 200px;
+    background-color: $bg-color; // 변수 사용하기
+
+    &:hover { // div에 마우스를 올렸을 때 적용
+        background-color: $bg-hover-color;
+    }
+}

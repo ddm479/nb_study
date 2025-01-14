@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Position</title>
+    <style>
+        body {
+            margin: 0px;
+            padding: 0px;
+        }
+
+        main,
+        section,
+        article,
+        div {
+            border: 1px solid black;
+            padding: 20px;
+        }
+
+        main {
+            max-width: 600px;
+            margin: 0 auto;
+            background-color: yellow;
+        }
+
+        section {
+            background-color: violet;
+            position: relative;
+        }
+
+        article {
+            background-color: cyan;
+        }
+
+        div {
+            background-color: white;
+        }
+
+        /* static은 요소가 HTML 문서에서 일반적인 흐름을 따라 배치가 되게하며, 기본값이다. */
+
+        div.relative {
+            position: relative;
+            right: 20px;
+        }
+        /* relative: 1. 요소가 문서의 일반적인 흐름에 따라 배치되게 한다. 
+        2. static과 차이점은 요소가 자신의 static 위치에서 top right bottom left와 같은 속성에 의한 상대적인 위치에 배치된다는 점입니다. */
+
+        div.absolute {
+            position: absolute;
+            background-color: grey;
+            top: 0px;
+            left: 0px;
+        }
+        /* absolute: 1. 요소가 문서의 일반적인 흐름을 따르지 않게한다. 
+        2. position: static속성을 가지고 있지 않은 부모를 기준으로 움직입니다. 만약 부모 중에 포지션이 relative, absolute, fixed인 태그가 없다면 가장 위의 태그(body)가 기준이 됩니다. */
+
+        div.fixed {
+            position: fixed;
+            background-color: blue;
+            bottom: 30px;
+            right: 30px;
+            border-radius: 50%;
+        }
+        /* fixed: 1. absolute와 마찬가지로 요소가 문서의 일반적인 흐름에서 제거된다. 
+        2. 대신, 스크린의 뷰포트를 기준으로 한 위치에 배치된다. 즉, 스크롤되어도 움직이지 않는 고정된 자리를 갖게 된다.
+
+        뷰포트란 웹 페이지가 브라우저 화면상에서 실제로 표시되는 영역이다.
+        */
+
+        div.sticky {
+            position: sticky;
+            top: 100px; /* 뷰포트top에서 100px 떨어졌을때부터 고정이된다. */
+        }
+        /* sticky: 1. 요소가 HTML 문서안에서 static과 같이 일반적인 흐름에 따라가다가 스크롤 위치가 임계점에 이르면 fixed와 같이 박스를 화면에 고정할 수 있는 속성입니다.
+        2. top속성만 가능하다 */
+
+    </style>
+</head>
+
+<body>
+    <main>
+        main
+        <section>
+            section
+            <article>
+                article
+                <div>static</div>
+                <div class="relative">relative</div>
+                <div class="absolute">absolute</div>
+                <div class="fixed">fixed</div>
+                <div class="sticky">sticky</div>
+                <div style="height: 1000px"></div>
+            </article>
+        </section>
+    </main>
+</body>
+
+</html>

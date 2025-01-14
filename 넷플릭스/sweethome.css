@@ -1,0 +1,152 @@
+*{
+    border: 1px solid greenyellow;
+    /* 개발할 때 보기편하려고 */
+}
+body {
+    margin: 0;
+    /* body태그에 기본적으로 속성을 가지고 있어서 UI를 깨뜨릴 수 있다 */
+}
+.home{
+    position: relative;
+    /* 부모가 relative를 선언하면 그 자식들은 부모 밖으로 못 나간다. */
+    background-color: rgb(20, 20, 20);
+    height: 100%;
+}
+video{
+    width:100%; 
+}
+.overlay {
+    position: absolute; 
+     /* absolute는 부모태그가 주는 공간안에서 위치를 지정할수 있게한다. */
+     /* absolute와 top, left 값을 쓰면 부모(자기가 담겨있는 곳)가 시작한 위치기준으로 그 값만큼 이동한 자리에 위치한다 */
+    /* <video>를 신경쓰지않고 배치된다 */
+    top: 0;
+    left: 0;
+    width: calc(100% - 100px);
+    padding: 10px 50px;
+}
+
+.header{
+    display: flex;
+}
+.logo{
+    color:red;
+    margin-right: 40px;
+    font-size: 28px;
+    font-weight: 900;
+    line-height: 36px;
+
+}
+.nav {
+    display: flex;
+    color:white;
+    line-height: 36px;
+    /* 세로 정렬 */
+}
+.nav-item {
+    padding: 0 10px;
+}
+.menu {
+    display: flex;
+    margin-left: auto;
+    color:white;
+    line-height: 36px;
+
+
+}
+.menu-item {
+    padding: 0 10px;
+    
+}
+.banner {
+    color: white;
+    padding: 50px 0;
+}
+.title {
+    font-size: 72px;
+}
+.badge {
+    font-size: 18px;
+    font-weight: 900;
+    padding: 15px 0;
+}
+.description {
+    width: 40%;
+}
+.buttons {
+    display: flex;
+    padding: 20px 0;
+}
+.white-button {
+    color: black;
+    background-color: white;
+    padding-right: 10px 25px;
+    border-radius: 4px;
+    font-weight: 900;
+    font-size: 18px;
+}
+.gray-button {
+    color: white;
+    background-color: rgba(170, 170,170, .4);
+    /* 투명한 색은 rgba()사용 불투명한 색은 rgb()사용 */
+    padding-right: 10px 25px;
+    border-radius: 4px;
+    font-weight: 900;
+    font-size: 18px;
+    margin-left: 15px;
+}
+.extra {
+    position: absolute;
+    right: 0;
+    width: 140px;
+    display: flex;
+
+}
+.replay-button {
+    display: inline-block;
+    border: 1px solid white;
+    padding: 10px;
+    border-radius: 90px;
+}
+.rating {
+    background-color: rgba(170, 170, 170, .2);
+    border-left: 3px solid white;
+    padding-left: 10px;
+    width: 100%;
+    margin-left: 10px;
+}
+.rating img {
+    width: 34px;
+    height: 34px;
+}
+.category-list {
+    position: absolute;
+    top: 500px;
+    left: 50px;
+    width: calc(100% - 50px);
+
+}
+.category .title {
+    font-size: 18px;
+    font-weight: 900;
+    color: white;
+    padding: 15px 0;
+}
+.list {
+    display: flex;
+    overflow-x: hidden;
+}
+.movie {
+    padding: 2px;
+}
+.movie:hover {
+    transform: scale(1.5);
+    /* 크기를 1.5배로 만듦 */
+    transition: .1s;  
+    /* 0.1초만에 변환  */
+    transition-delay: 1s;
+    /* 마우스 올리고 1초후에 */
+}
+.movie img {
+    border-radius: 4px;
+}

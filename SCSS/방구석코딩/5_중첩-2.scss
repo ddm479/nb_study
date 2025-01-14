@@ -1,0 +1,9 @@
+.btn {
+    &.active > a { // btn.active 면 자식인 a태그에 적용
+        font-size: 2rem;
+    }
+
+    &:hover > a {   // btn에 마우스를 올리면 자식인 a태그에 적용
+        color: red;
+    }
+}

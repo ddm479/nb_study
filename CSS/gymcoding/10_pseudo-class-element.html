@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Pseudo Class&Element</title>
+    <style>
+        a {
+            font-size: 30px;
+        }
+        /* 가상클래스(Pseudo class): 선택하고자 하는 HTML요소의 특별한 상태를 명시할 때 사용한다. */
+        /* 사용할 때에는 link -> visited -> hover -> active 순으로 사용하길 권장합니다. 순서가 달라지면 적용이 안될 수도 있기때문이다. */
+
+        a:link {
+            color: cyan;
+        }
+
+        a:visited {
+            color: red;
+        }
+
+        a:hover {
+            color: blue;
+            font-weight: 900;
+        }
+
+        fieldset:hover {
+            background-color: lightgrey;
+            box-shadow: 0 0 20px grey;
+        }
+
+        a:active {
+            color: yellow;
+        }
+
+        input:focus {
+            outline: none;
+            border: 3px solid red;
+            box-shadow: 0 0 20px rgb(255, 117, 117);
+        }
+
+        .field {
+            margin-bottom: 10px;
+        }
+
+        /* :nth-child -> 형제 사이에서의 순서에 따라 요소를 선택한다. */
+        /* li 태그의 짝수번째 자식에만 적용 */
+        li:nth-child(odd) {
+            background-color: yellow;
+        } 
+
+        /* :not(selector) -> not(selector) 안에 포함된 요소를 제외시킨다는 의미 */
+        /* li 태그중 class명이 target인 것만 적용하지 않고 나머지는 적용 */
+        li:not(.target) {
+            font-size: 30px;
+        }
+
+        /* 가상 요소(Pseudo element): 해당 HTML 요소의 특정 부분만 선택할 때 사용한다.  */
+
+        /* ::before -> 특정 요소의 내용(content)부분 바로 앞에 다른 요소를 삽입할 때 사용한다. ex) 회원가입에 필수입력란 앞에 (*)같은거를 붙일 때 사용 */
+        .required::before {
+            content: '*';
+            margin-right: 2px;
+            color: red;
+            font-size: 18px;
+        }
+
+        [data-tooltip] {
+            position: relative;
+        }
+
+        /* ::after -> 특정 요소의 내용(content)부분 바로 뒤에 다른 요소를 삽입할 때 사용한다. ex) 툴팁(말풍선)같은거 나타낼 때*/
+        [data-tooltip]:hover::after {
+            content: attr(data-tooltip);
+            position: absolute;
+            top: 0px;
+            left: 56px;
+            background-color: black;
+            color: white;
+            width: 200px;
+        }
+
+        /* ::first-letter -> 텍스트의 첫 글자만을 선택한다. 단 블록 레벨 요소에만 사용할 수 있다. */
+        .letter::first-letter {
+            font-size: 60px;
+            color: blue;
+        }
+
+        /* ::first-line -> 텍스트의 첫 라인만을 선택한다. 단 블록 레벨 요소에만 사용할 수 있다. */
+        .line::first-line {
+            background-color: yellow;
+            color: blue;
+            font-size: 20px;
+        }
+
+        /* ::selection -> 해당 요소에서 사용자가 선택한 부분(ex: 드래그한 부분)만을 선택할때 사용한다. */
+        p::selection {
+            background-color: red;
+            color: white;
+        }
+    </style>
+</head>
+
+<body>
+    <fieldset>
+        <legend>Pseudo Class</legend>
+        <div>
+            <a href="https://naver.com">네이버</a>
+            <a href="https://kakao.com">카카오</a>
+        </div>
+    </fieldset>
+    <fieldset>
+        <legend>focus, before, after</legend>
+        <div class="field">
+            <label class="required" for="name">이름</label>
+            <input type="text" id="name" />
+        </div>
+        <div class="field">
+            <label class="required" for="age">나이</label>
+            <input type="text" id="age" />
+        </div>
+        <button data-tooltip="이 버튼을 클릭하여 정보를 보내세요!">보내기</button>
+    </fieldset>
+
+    <fieldset>
+        <legend>nth-child, not</legend>
+        <ul>
+            <li class="target">1content</li>
+            <li>2content</li>
+            <li>3content</li>
+            <li>4content</li>
+            <li>5content</li>
+        </ul>
+    </fieldset>
+
+    <fieldset>
+        <legend>first-letter, first-line, section</legend>
+        <div>
+            <p class="letter">
+                Lorem ipsum dolor, sit amet consectetur adipisicing elit. Adipisci provident praesentium amet hic dicta,
+                temporibus quos tempora possimus iste? Autem reprehenderit explicabo repellat
+                distinctio id esse minus suscipit, exercitationem aperiam? Animi et eius laboriosam minima praesentium
+                veritatis nesciunt optio odit, velit laborum mollitia libero quia aperiam natus nemo!
+                Possimus quam rem voluptatem perspiciatis, saepe quas illum libero ad omnis facere.
+            </p>
+            <p class="line">
+                Lorem ipsum dolor sit, amet consectetur adipisicing elit. Voluptate qui, laborum ad cumque fuga ut ab
+                nesciunt vero. Dignissimos ad ullam vero adipisci porro ut optio animi corporis
+                veritatis dicta! Quod obcaecati est perferendis alias atque qui amet eius fugiat, placeat suscipit
+                dolore. Minima repellendus vero quis quae, cum, earum id tempora autem at aspernatur animi
+                saepe et voluptatum nulla.
+            </p>
+        </div>
+    </fieldset>
+</body>
+
+</html>

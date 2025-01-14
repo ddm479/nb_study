@@ -1,0 +1,47 @@
+body {
+    /* margin:0 */
+}
+div {
+    width: 50px;
+    height: 50px;
+    margin-bottom: 20px;
+    background: red;
+}
+
+.container {
+    background: yellow;
+    left: 20px;
+    top: 20px;
+    position: relative;
+    /* relative와 top, left 값을 쓰면 원래 있어야할 자리에서 그 값만큼 이동한 자리에 위치한다(시작한다) */
+}
+
+.box1 {
+    background: green;
+    left: 20px;
+    top: 20px;
+    position: absolute;
+    /* absolute와 top, left 값을 쓰면 부모(자기가 담겨있는 곳)가 시작한 위치기준으로 그 값만큼 이동한 자리에 위치한다 */
+}
+
+.box2 {
+    background: green;
+    left: 20px;
+    top: 20px;
+    position: relative;
+}
+
+.box3 {
+    background: green;
+    left: 100px;
+    top: 100px;
+    position: fixed;
+    /* 상자에서 완전히 벗어나서 페이지 상에서 이동한다 */
+}
+.box4 {
+    background: green;
+    left: 100px;
+    top: 160px;
+    position: sticky;
+    /* 스크롤해도 없어지지않고 원래 있던 자리에 있는다 */
+}

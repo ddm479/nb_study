@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Transform&Transition</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            background-color: lightgrey;
+        }
+
+        .outline,
+        .box {
+            width: 60px;
+            height: 60px;
+        }
+
+        .outline {
+            border: 3px solid yellow;
+            margin: 0 auto;
+            margin-top: 20px;
+        }
+
+        .box {
+            background-color: blue;
+        }
+
+        .box1 {
+            transform: translate(10px, 10px);
+            /* 지정한 크기만큼 x축, y축으로 이동한다. */
+        }
+
+        .box2 {
+            transform: scale(2, 0.5);
+            /* 지정한 크기만큼 x축과 y축으로 확대,축소한다. */
+        }
+
+        .box3 {
+            transform: rotateZ(45deg);
+            /* 1. rotateZ(각도): z축을 기준으로 회전한다. rotate()와 같은 결과가 나온다. */
+            /* 2. 입체감 있게 표현하려면 perspective 속성을 부모요소에 적용해야 한다. */
+        }
+
+        /* .outline-box3 {
+            perspective: 50px;
+        } */
+        .box4 {
+            transform: skew(15deg, 20deg);
+            /* 지정한 각도만큼 x축과 y축으로 왜곡한다. */
+        }
+
+        /* Transition */
+        .box1 {
+            /* transition-property: all;
+        transition-duration: 1s; */
+            /* transition-delay: 1s; */
+            /* transition-timing-function: ease-out; */
+            transition: 2s 1s ease-out;
+        }
+
+        .box1:hover {
+            width: 200px;
+            height: 200px;
+            background-color: red;
+            transform: rotate(180deg);
+        }
+    </style>
+</head>
+
+<body>
+    <div class="outline">
+        <div class="box box1"></div>
+    </div>
+    <div class="outline">
+        <div class="box box2"></div>
+    </div>
+    <div class="outline outline-box3">
+        <div class="box box3"></div>
+    </div>
+    <div class="outline">
+        <div class="box box4"></div>
+    </div>
+</body>
+
+</html>

@@ -1,0 +1,51 @@
+@font-face {
+    font-family: 'GmarketSansMedium';
+    src: url('https://fastly.jsdelivr.net/gh/projectnoonnu/noonfonts_2001@1.1/GmarketSansMedium.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+html > body {
+    font-family: 'GmarketSansMedium';
+    text-underline-position: under;
+}
+
+.con {
+    max-width: 1200px;
+}
+
+// 미디어 쿼리 이렇게도 쓰인다. 가독성 좋은 버젼
+// 믹스인과 미디어쿼리, 조건문 조합한 반응형 작업
+@mixin response-con($breakpoint) {
+    @if $breakpoint == medium {
+        @media(1150px >= width > 750px){
+            @content; // 1
+        }
+    }
+    @else if $breakpoint == small {
+        @media(750px >= width){
+            @content; // 2
+        }
+    }
+}
+.top-bar {
+    .con{   // top-bar의 후손인 con에 적용
+        @include reponse-con(medium) {
+            // mixin 호출부분 {} 안에 있는게 content를 의미
+            max-width: 900px; // 1
+            background-color: blue; // 1
+        }
+
+        @include reponse-con(small) {
+            // mixin 호출부분 {} 안에 있는게 content를 의미
+            max-width: 500px; // 2
+            background-color: green; // 2
+        }
+
+        // 미디어쿼리   
+        // @media(750px >= width){
+        //     max-width: 500px; // 2
+        //     background-color: green; // 2
+        // }
+    }
+}

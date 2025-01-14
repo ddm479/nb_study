@@ -1,0 +1,18 @@
+div, h2, span {
+    width: 80px;
+    height: 80px;
+    margin: 20px;
+}
+
+div {
+    background: red;
+}
+
+h2 {
+    background: green;
+    display: inline-block;;
+}
+
+span {
+    background: blue;
+}

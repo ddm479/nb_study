@@ -1,0 +1,37 @@
+// 믹스인 - css를 코드 블록으로 만들어서 해당 블록을 재사용하는 기술 -> 유지보수성이 높아짐
+
+// @mixin : 믹스인 정의
+@mixin common-btn($width: 150px, $height: 50px, $bg-color: #afafaf) {  
+    
+    // 1. 정의 부분에 인자가 있는 경우 인자($bg-color)를 사용해서 값을 전달해줄 수 있다. 호출부분에 인자가 없으면 설정한 기본값 #afafaf이 들어감 
+    // 2. 정의 부분에 인자가 없는 경우 () 생략가능 -> common-btn
+
+    width: $width;
+    height: $height;
+    background-color: $bg-color;  // 색깔
+    border: 2px solid black;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.25rem;
+    font-weight: bold;
+
+    &:hover {
+        text-decoration: underline;
+    }
+}
+
+.btn-1 {
+    @include common-btn; // @include : 믹스인 호출
+}
+
+.btn-2 {
+    // background-color: #ffffff; // 먼저 쓰면 적용안됨
+    @include common-btn(200px, 70px, red); 
+    // background-color: #ffffff; // 순서에 따라 우선순위가 달라짐, 믹스인 속성을 변경하려면 이렇게 뒤에 추가
+}
+
+.btn-3 {
+    @include common-btn($bg-color: blue); // 특정 값만 전달하기
+} 

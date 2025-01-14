@@ -1,0 +1,58 @@
+@font-face {
+    font-family: 'GmarketSansMedium';
+    src: url('https://fastly.jsdelivr.net/gh/projectnoonnu/noonfonts_2001@1.1/GmarketSansMedium.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+html > body {
+    font-family: 'GmarketSansMedium';
+    text-underline-position: under;
+}
+.top-bar {
+    height: 80px;
+
+    > .container { // top-bar의 자식인 container
+        height: 100%;   
+        display: flex;
+    }
+
+    .logo { // top-bar의 후손인 logo
+        display: flex;
+        align-items: center;
+        padding: 0 10px;
+        font-size: 20px;
+    }
+
+    .menu-1 {
+        margin-left: auto;
+
+        > ul { // menu-1의 자식인 ul
+            display: flex;
+            height: 100%;
+            
+            > li {
+                > a { // ul의 자식인 li의 자식인 a태그에 적용
+                    background-color: red;
+                    display: flex;
+                    height: 100%;
+                    align-items: center;
+                    padding: 0 20px;
+                } 
+
+                &:hover > a { //  li에 마우스를 올렸을 때 a태그에 적용
+                    text-decoration: underline;
+                }
+                // 위와 아래는 같은데 쉬운 위에꺼 쓰자
+                /*
+                &:hover {
+                    & > a { // li의 자식인 a
+                        text-decoration: underline;
+                    }
+                }
+                */
+            }
+        }
+    }
+}
+
