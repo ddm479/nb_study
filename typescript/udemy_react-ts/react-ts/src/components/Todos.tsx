@@ -38,7 +38,6 @@ const Todos: React.FC= () => {
                 />
             ))}
         </ul>
-        <button onClick={test}>hi???</button>
         </>
     )
 }
