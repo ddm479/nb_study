@@ -1,7 +1,7 @@
 export const Status = () => {
     return (
         <div>
-            <h2></h2>
+            <h2>loading..</h2>
         </div>
     )
 }
