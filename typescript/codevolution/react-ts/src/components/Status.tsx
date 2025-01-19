@@ -1,7 +1,20 @@
-export const Status = () => {
+type StatusProps = {
+    status: string
+}
+
+export const Status = (props: StatusProps) => {
+    let message
+    if (props.status === 'loading') {
+        message = 'Loading'
+    } else if (props.status === 'success') {
+        message = 'Data feched sucessfully'
+    } else if (props.status === 'error') {
+        message = 'Error fetching data'
+    }
+
     return (
         <div>
-            <h2>loading..</h2>
+            <h2>Status - {message}</h2>
         </div>
     )
 }
