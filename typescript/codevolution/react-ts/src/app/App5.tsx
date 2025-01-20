@@ -1,10 +1,10 @@
-import { Status } from './components/Status'
-import { Heading } from './components/Heading'
-import { Oscar } from './components/Oscar'
+import { Status } from '../components/5-advanced_props/Status'
+import { Heading } from '../components/5-advanced_props/Heading'
+import { Oscar } from '../components/5-advanced_props/Oscar'
 import './App.css'
-import { Greet } from './components/Greet'
+import { Greet } from '../components/5-advanced_props/Greet'
 
-function App() {
+function App5() {
   const nameList = [
     {
       first: 'Bruce',
@@ -32,4 +32,4 @@ function App() {
   )
 }
 
-export default App
+export default App5
