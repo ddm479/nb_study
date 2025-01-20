@@ -45,7 +45,7 @@ const TodosContextProvider = (props) => {
     return (
     <TodosContext.Provider value={contextValue}>
         {props.children} 
-        {/* children은 props의 기본 프로퍼티라 props에 정의해줄 필요가 없다 */}
+        {/* React.FC를 사용하면 props에 기본적으로 children이 들어있어서 props에 정의해줄 필요가 없다 */}
     </TodosContext.Provider>
     )
 }
