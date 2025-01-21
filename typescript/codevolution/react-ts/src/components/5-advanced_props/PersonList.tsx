@@ -1,8 +1,7 @@
+import { Name } from "./8-Person.types"
+
 type PersonListProps = {
-    names: {
-        first: string
-        last: string
-    }[] // 객체 배열 타입지정
+    names: Name[] // 객체 배열 타입지정
 }
 
 export const PersonList = (props: PersonListProps) =>{
