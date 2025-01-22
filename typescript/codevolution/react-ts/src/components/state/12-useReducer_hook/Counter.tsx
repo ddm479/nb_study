@@ -6,7 +6,7 @@ type CounterState = {
 
 // action 타입 지정
 type CounterAction = {
-    type: string
+    type: 'increment' | 'decrement' | 'reset' // 템플릿 리터럴로 구체적으로 지정
     payload: number
 }
 const initialState = { count:0 }
