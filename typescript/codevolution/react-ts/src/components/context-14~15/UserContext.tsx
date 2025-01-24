@@ -15,7 +15,7 @@ type UserContextProviderProps = {
     children: React.ReactNode
 }
 
-export const UserContext = createContext<UserContextType>(null) // 초깃값은 null이지만 나중에는 UserContextType 유형이 될 수 있다는걸 의미
+export const UserContext = createContext<UserContextType | null>(null) // 초깃값은 null이지만 나중에는 UserContextType 유형이 될 수 있다는걸 의미, (null) -> ({} as UserContextType) 대체가능
 
 export const UserContextProvider = ({ children }: UserContextProviderProps) => {
     const [user, setUser] = useState<AuthUser | null>(null)

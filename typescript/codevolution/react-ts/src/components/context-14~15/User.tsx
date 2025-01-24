@@ -4,6 +4,7 @@ import { UserContext } from "./UserContext"
 export const User = () => {
     const userContext = useContext(UserContext)
     const handleLogin = () => {
+        // null 값 체크
         if(userContext) {
             userContext.setUser({
                 name: 'haha',
@@ -12,6 +13,7 @@ export const User = () => {
         }
     }
     const handleLogout = () => {
+        // null값 체크
         if(userContext){
             userContext.setUser(null)
         }
@@ -22,6 +24,7 @@ export const User = () => {
             <button onClick={handleLogout}>Logout</button>
             <div>User name is {userContext?.user?.name}</div>
             <div>User email is {userContext?.user?.email}</div>
+            {/* null값 체크 */}
         </div>
     )
 }
