@@ -4,7 +4,7 @@ import Todo from '../models/todo';
 // 타입 별칭(type alias), 타입 정의 부분을 재사용할 수 있다.
 type TodosContextObj = {
     // 컨텍스트 객체 속성들의 타입만 정의한다.
-    items: Todo[]; 
+    items: Todo[];
     addTodo: (text: string) => void; // 반환값이 없는 함수 타입
     removeTodo: (id: string) => void;
 }
@@ -43,10 +43,10 @@ const TodosContextProvider = (props) => {
         removeTodo: removeTodoHandler
     }
     return (
-    <TodosContext.Provider value={contextValue}>
-        {props.children} 
-        {/* React.FC를 사용하면 props에 기본적으로 children이 들어있어서 props에 정의해줄 필요가 없다 */}
-    </TodosContext.Provider>
+        <TodosContext.Provider value={contextValue}>
+            {props.children}
+            {/* React.FC를 사용하면 props에 기본적으로 children이 들어있어서 props에 정의해줄 필요가 없다  -> 근데 또 아닌듯? 이거 나중에 보기: https://2mojurmoyang.tistory.com/243*/}
+        </TodosContext.Provider>
     )
 }
 
