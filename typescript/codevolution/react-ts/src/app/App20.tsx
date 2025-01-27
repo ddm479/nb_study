@@ -1,4 +1,4 @@
-import { RandomNumber } from "../components/restriction/RandomNumber";
+import { RandomNumber } from "../components/restriction-20/RandomNumber";
 
 function App20() {
     return (
