@@ -1,4 +1,4 @@
-import { CustomButton } from "../components/22-html/Button";
+import { CustomButton } from "../components/2223-html/Button";
 
 function App22() {
     return (
