@@ -1,7 +1,7 @@
 SASS -> CSS전처리기
 SCSS -> SASS로부터 파생된 CSS전처리기(SASS + CSS문법)
 
-codepen에서 실행가능
+현재 코드들은 codepen이라는 사이트에서 실행한다고 가정
 
 
 <div></div>
@@ -18,3 +18,6 @@ div {
         background-color: $bg-hover-color;
     }
 }
+
+// -> vscode에서 실행 시 live sass compiler 설치하고 css로 컴파일하고 사용하기
+설정 참고: https://www.youtube.com/watch?v=C4g036Ioo3o&list=PLmAWMAo-opQzz95sYuW5Bj9mcmx0NG-ey&index=1
