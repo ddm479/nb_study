@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS 애니메이션 예제</title>
+    <style>
+        @keyframes moveRight {
+            0% {
+                transform: translateX(0);
+            }
+
+            100% {
+                transform: translateX(2300px);
+            }
+        }
+
+        .box {
+            width: 100px;
+            height: 100px;
+            background-color: red;
+            position: relative;
+            animation: moveRight 1s ease-in-out infinite alternate;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="box"></div>
+</body>
+
+</html>

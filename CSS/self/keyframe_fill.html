@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS animation-fill-mode 예제</title>
+    <style>
+        @keyframes changeColor {
+            0% {
+                background-color: red;
+                width: 100px;
+            }
+
+            100% {
+                background-color: blue;
+                width: 300px;
+            }
+        }
+
+        .box {
+            height: 100px;
+            margin: 10px;
+            text-align: center;
+            line-height: 100px;
+            color: white;
+            font-weight: bold;
+        }
+
+        /* 기본 fill-mode: none */
+        .none {
+            animation: changeColor 3s ease-in-out 2s;
+            /* 2초 후 시작 */
+            background-color: gray;
+        }
+
+        /* forwards: 애니메이션이 끝난 후, 마지막 상태 유지 */
+        .forwards {
+            animation: changeColor 3s ease-in-out 2s forwards;
+            background-color: gray;
+        }
+
+        /* backwards: 애니메이션 시작 전, 첫 번째 프레임 유지 */
+        .backwards {
+            animation: changeColor 3s ease-in-out 2s backwards;
+            background-color: gray;
+        }
+
+        /* both: 시작 전 첫 번째 프레임 유지 + 끝난 후 마지막 프레임 유지 */
+        .both {
+            animation: changeColor 3s ease-in-out 2s both;
+            background-color: gray;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="box none">none (기본값)</div>
+    <div class="box forwards">forwards</div>
+    <div class="box backwards">backwards</div>
+    <div class="box both">both</div>
+
+</body>
+
+</html>
