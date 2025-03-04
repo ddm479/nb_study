@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width">
+    <style>
+        /* 배너 스타일 */
+        .banner {
+            position: relative;
+            top: 0;
+            left: 0;
+            width: 100%;
+            background-color: #ffcc00;
+            padding: 20px;
+            text-align: center;
+            z-index: 1000;
+            transition: transform 0.3s ease, opacity 0.3s ease;
+            /* 애니메이션 추가 */
+        }
+
+        /* X 버튼 스타일 */
+        .close-btn {
+            position: absolute;
+            top: 10px;
+            left: 20px;
+            font-size: 30px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="banner" id="banner">
+        <button class="close-btn" id="close-btn">X</button>
+        <p>광고 배너 내용</p>
+    </div>
+
+    <script src="banner.js"></script>
+</body>
+
+</html>
