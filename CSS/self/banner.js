@@ -1,5 +1,5 @@
-// 버튼 클릭 시 배너 사라지는 효과구현 방법
-// 방법 1
+// 버튼 클릭 시 배너 위로 올리면서 사라지는 효과구현 방법
+// 방법 1 -> 이건 그냥 숨기기기
 // document.getElementById("close-btn").addEventListener("click", function () {
 //     var banner = document.getElementById("banner");
 //     banner.style.display = "none";  // 배너를 숨깁니다.
@@ -23,5 +23,5 @@ document.getElementById("close-btn").addEventListener("click", function () {
     // 애니메이션이 끝난 후 배너를 display: none으로 설정
     setTimeout(function () {
         banner.style.display = "none";  // 배너를 완전히 숨김
-    }, 300); // 애니메이션 시간 (0.3초) 이후에 실행
+    }, 1000); // 애니메이션 시간 (1초) 이후에 실행
 });
