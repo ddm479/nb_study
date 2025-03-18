@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Inline-Flex 예제</title>
+    <style>
+        .inline-flex-container {
+            display: inline-flex;
+            /* 다른 요소와 같은 줄에 배치됨 */
+            background-color: lightgray;
+            padding: 10px;
+            border: 1px solid black;
+        }
+
+        .item {
+            padding: 10px;
+            background-color: steelblue;
+            color: white;
+            margin: 5px;
+        }
+
+        .text {
+            display: inline-block;
+            margin-left: 10px;
+            font-size: 18px;
+            color: black;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="inline-flex-container">
+        <div class="item">A</div>
+        <div class="item">B</div>
+        <div class="item">C</div>
+    </div>
+    <div class="text">Hello</div>
+
+</body>
+
+</html>
