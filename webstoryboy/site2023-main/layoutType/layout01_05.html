@@ -17,12 +17,16 @@
             width: 1200px;
             margin: 0 auto;
             display: grid;
+            /* 부모에서 한 번에 설정 -> 편리함 */
+            /* 8개 구역으로 나눔 */
             grid-template-areas: 
                 "header header"
                 "nav nav"
                 "aside section"
                 "footer footer";
+            /* aside section의 width가 각각 400px 800px */
             grid-template-columns: 400px 800px;
+            /* 각 층의 height */
             grid-template-rows: 100px 100px 780px 100px;
         }
         #header {

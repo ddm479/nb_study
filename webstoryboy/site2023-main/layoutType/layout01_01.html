@@ -7,15 +7,20 @@
     <title>레이아웃 유형01</title>
     <style>
         * {
+            /* m0 */
             margin: 0;
+            /* p0 */
             padding: 0;
         }
         body {
+            /* bgc */
             background-color: #FFF3E0;
         }
         #wrap {
+            /* w1200 */
             width: 1200px;
-            margin: 0 auto;
+            /* 중앙정렬 */
+            margin: 0 auto; 
         }
         #header {
             width: 1200px;
@@ -31,6 +36,9 @@
             width: 400px;
             height: 780px;
             background-color: #FFB74D;
+            /* block일 때 한 줄에 여러개 배치하기위한 float */
+            /* 사실 float은 글씨나 이미지를 정렬할 때 사용한다. */
+            /* 그래서 float 사용한 곳의 height의 값이 0이되는 버그가 발생한다.*/
             float: left;
         }
         #section {
@@ -43,7 +51,9 @@
             width: 1200px;
             height: 100px;
             background-color: #FF9800;
-            clear: both;
+            /* 버그를 고치는 clear */
+            /* 왼쪽이든 오른쪽이든 float된 요소가 있으면 그 옆에 위치하지 않도록 막기위해 줄 바꿈함. */
+            clear: both;    
         }
     </style>
 </head>
