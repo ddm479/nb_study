@@ -34,6 +34,7 @@
             width: 300px;
             height: 780px;
             background-color: #4FC3F7;
+            /* block일 때 한 줄에 여러개 배치하기위한 float */
             float: left;
         }
         #article1 {
@@ -60,7 +61,7 @@
             background-color: #0288D1;
         }
 
-        /* clearfix */
+        /* clearfix, float버그 시 가장 안정적인 방법으로 사용된다(clear, overflow 대안) */
         .clearfix::before,
         .clearfix::after {
             content: '';

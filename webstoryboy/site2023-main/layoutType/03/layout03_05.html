@@ -27,10 +27,16 @@
         }
         #main {
             display: grid;
-            grid-template-areas: 
+            /* 동작은 할 수 있어도 비표준 */
+            /* grid-template-areas: 
                 "aside article1 article1"
                 "aside article2 article2"
-                "aside article3 article3";
+                "aside article3 article3"; */
+            /* 열이 2개이므로 areas의 이름 개수도 2개가 맞다 */
+            grid-template-areas: 
+                "aside article1"
+                "aside article2"
+                "aside article3";
             grid-template-columns: 300px 900px;
             grid-template-rows: 260px 260px 260px;
         }
