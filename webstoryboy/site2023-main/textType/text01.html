@@ -70,11 +70,12 @@
             font-size: 24px;
             line-height: 1;
             margin-bottom: 10px;
+            padding-top: 75px;
+            position: relative;
+            /* 한 줄 효과 */
             white-space: nowrap;
             overflow: hidden;
             text-overflow: ellipsis;
-            padding-top: 75px;
-            position: relative;
         }
         .text__title::before {
             content: '';
@@ -108,12 +109,14 @@
             font-weight: 300;
             line-height: 1.4;
             margin-bottom: 20px;
+            color: #666;
+
+            /* 3줄효과 */
             overflow: hidden;
             text-overflow: ellipsis;
             display: -webkit-box;
             -webkit-line-clamp: 3; 
             -webkit-box-orient: vertical;
-            color: #666;
         }
         .text__btn {
             font-size: 16px;
