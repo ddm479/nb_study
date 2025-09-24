@@ -87,8 +87,8 @@
             font-size: 28px;
             margin-bottom: 10px;
             overflow: hidden;
-            white-space: nowrap;
-            text-overflow: ellipsis;
+            white-space: nowrap; /* 줄바꿈을 하지 않도록 함 → 텍스트가 한 줄로만 출력됨. */
+            text-overflow: ellipsis; /* 넘치는 부분이 잘렸을 때, 끝에 ...을 표시. */
             padding-right: 20px;
         }
         .card__inner .card .desc {
@@ -96,6 +96,7 @@
             font-weight: 300;
             color: #666;
             line-height: 1.4;
+            /* 텍스트 3줄효과 */
             overflow: hidden;
             text-overflow: ellipsis;
             display: -webkit-box;
